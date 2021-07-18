@@ -10,9 +10,19 @@
 </p>
 
 <p align="left">
-  💌 Abaixo estão meus contatos ⤵️
+  <strong> Entregáveis da atividade </strong>
+  
+-Template do site oficial 
 
-    
+-Landing page de promoções, estilo black friday; 
+
+-Cadastre seu e-mail para receber promoções 
+
+-Dados no localstorage
+</p>
+
+<p align="left">
+  💌 Abaixo estão meus contatos ⤵️
 
 </p>
 
