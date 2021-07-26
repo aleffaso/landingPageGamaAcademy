@@ -17,13 +17,70 @@
         <img class="imageSize" src="assets/img/blackFriday.png">
 
         <div class="submitForm">
-            <div class="form-group">
-                <form name="form">
-                    <label for="email" style="color: white;"><h5>Saiba mais</h5> <input type="text" class="form-control" id="email" name="email" placeholder="seuemail@servico.com"></label><br>
-                    <input type="button" class="btn" value="Se inscrever" onClick="assignValues()">
-                </form> 
+            <form name="form">
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+                    Escolha seu produto
+                </button>
+            </form> 
+        </div>
+        
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Produtos em promoção</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="product">
+                            <form target=__self id="checkout" action="/cart.html" method="get">
+
+                                <div class="details">
+                                    <h5>Cafeteira</h5>
+                                    <input type="radio" id="cafeteira" name="form" value="cafeteira" checked>
+                                </div>
+                                <img src="assets/img/cafeteira.png">
+
+                                <hr>
+
+                                <div class="details">
+                                    <h5>Batedeira</h5>
+                                    <input type="radio" id="batedeira" name="form" value="batedeira">
+                                </div>
+                                <img src="assets/img/batedeira.png">
+
+                                <hr>
+
+                                <div class="details">
+                                    <h5>Panela</h5>
+                                    <input type="radio" id="panela" name="form" value="panela">
+                                </div>
+                                <img src="assets/img/panela.png">
+
+                                <hr>
+
+                                <div class="details">
+                                    <h5>Kit de talheres</h5>
+                                    <input type="radio" id="talher" name="form" value="talher">
+                                </div>
+                                <img src="assets/img/talher.png">
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                        <button type="submit" class="btn btn-success" onclick="submitFunction()" value="checkout">Confirmar</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+
     </body>
 
     <script src="js/script.js"></script>

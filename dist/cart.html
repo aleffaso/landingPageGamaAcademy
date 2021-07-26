@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Gama Academy Task" content="" />
+        <meta name="Aleff Oliveira" content="" />
+        <title>Black Friday!</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+
+    <body class="grayBackground">
+
+        <div id="cartPagePicture"></div>
+
+        <div class="submitForm">
+            <form name="form">
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+                    Pagamento
+                </button>
+            </form> 
+        </div>
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Preencha seus dados</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="product">
+                            <form id="dataCheckout">
+                                <div style="text-align: center;">
+                                    <h4>Identificação</h4>
+
+                                    <fieldset>
+                                        <input style="margin:5px;" placeholder="Nome" type="text" id="customerFirstName" tabindex="1" name="customerFirstName" for="customerFirstName" required autofocus/>
+                                        <input style="margin:5px;" placeholder="Sobrenome" type="text" id="customerLastName" tabindex="2" name="customerLastName" for="customerLastName" required autofocus/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <input style="margin:5px;" placeholder="E-mail" type="text" id="customerEmailAddress" tabindex="3" name="customerEmailAddress" for="customerEmailAddress" required autofocus/>
+                                        <input style="margin:5px;" placeholder="Telefone" type="text" id="customerPhoneNumber" tabindex="5" name="customerPhoneNumber" for="customerPhoneNumber" maxlength="9" required autofocus/>
+                                        <input style="margin:5px;" placeholder="CPF" type="text" id="customerSSN"  tabindex="6" name="customerSSN" maxlength="11" for="customerSSN" required autofocus/>
+                                        <input style="margin:5px;" placeholder="Data de Nascimento" type="text" id="customerBirthDate" tabindex="7" name="customerBirthDate" maxlength="10" onkeyup="this.value=this.value.replace(/^(\d\d)(\d)$/g,'$1/$2').replace(/^(\d\d\/\d\d)(\d+)$/g,'$1/$2').replace(/[^\d\/]/g,'')" for="customerBirthDate" required autofocus/>
+                                    </fieldset>
+                                    <hr>
+                                    <h4>Endereço de entrega</h4>
+
+                                    <fieldset>
+                                        <input style="margin:5px;" placeholder="Endereço" type="text" id="customerShipAddress" tabindex="8" name="customerShipAddress" for="customerShipAddress" required autofocus/>
+                                        <input style="margin:5px;" placeholder="Bairro" type="text" id="customerProvincy" tabindex="12" name="customerProvincy" for="customerProvincy" required autofocus/>
+                                        <input style="margin:5px;" placeholder="Número" type="text" id="customerAddressNumber" tabindex="9" name="customerAddressNumber" for="customerAddressNumber" required autofocus/>
+                                        <input style="margin:5px;" placeholder="Refêrencia" type="text" id="customerReference" tabindex="10" name="customerReference" for="customerReference" required autofocus/>
+                                        <input style="margin:5px;" placeholder="Cidade" type="text" id="customerCity" tabindex="11" name="customerCity" for="customerCity" required autofocus/>
+                                        <input style="margin:5px;" placeholder="UF" type="text" id="customerUF" placeholder="DF" tabindex="13" name="customerUF" maxlength="2" for="customerUF" required autofocus/>
+                                        <input style="margin:5px;" placeholder="CEP" type="text" id="customerZipCode" placeholder="00000-000" tabindex="14" name="customerZipCode" maxlength="9" for="customerZipCode" required autofocus/>
+                                    </fieldset>
+                                    <hr>
+                                    <h4>Confirmação de compra</h4>
+
+                                    <div id="cartPagePictureFrame"></div>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                        <button type="submit" class="btn btn-success" onclick="assignValues()" value="dataCheckout">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
