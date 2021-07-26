@@ -12,11 +12,13 @@
 <p align="left">
   <strong> Entregáveis da atividade </strong>
   
--Template do site oficial 
+-Template do site oficial; 
 
--Landing page de promoções, estilo black friday; 
+-Lista de produtos a serem escolhidos;
 
--Cadastre seu e-mail para receber promoções 
+-Target blank para produto selecionado; 
+
+-Confirmação de compra + inserção de dados;
 
 -Dados no localstorage
 </p>
